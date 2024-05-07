@@ -20,13 +20,26 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-
+        ````javascript
+        
+        var circle;			// variable to hold a single circle when creating circles / iterating
+        var circles = [];	// variable to store all circles in one Array
 
         // TODO 2 : Create a function that draws a circle 
-        
+        circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
+physikz.addRandomVelocity(circle, canvas);
+view.addChild(circle);
+circles.push(circle);
 
         // TODO 3 / 7 : Call the drawCircle() function 
-
+        ```js
+        physikz.updatePosition(/* Your Bracket Notation HERE */);
+  physikz.updatePosition(/* Your Bracket Notation HERE */);
+  physikz.updatePosition(/* Your Bracket Notation HERE */);
+  physikz.updatePosition(/* Your Bracket Notation HERE */);
+  physikz.updatePosition(/* Your Bracket Notation HERE */);
+}
+        ```
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -39,11 +52,20 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-
+            physikz.updatePosition(/* Your Bracket Notation HERE */);
+            physikz.updatePosition(/* Your Bracket Notation HERE */);
+            physikz.updatePosition(/* Your Bracket Notation HERE */);
+            physikz.updatePosition(/* Your Bracket Notation HERE */);
+            physikz.updatePosition(/* Your Bracket Notation HERE */);
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           
-
+            game.checkCirclePosition(/* Your Bracket Notation HERE */);
+            game.checkCirclePosition(/* Your Bracket Notation HERE */);
+            game.checkCirclePosition(/* Your Bracket Notation HERE */);
+            game.checkCirclePosition(/* Your Bracket Notation HERE */);
+            game.checkCirclePosition(/* Your Bracket Notation HERE */);
+            var rightEdge = circle.x + circle.radius;
+            for (var i = 0; i < myArray.length; i++) {
             // TODO 9 : Iterate over the array
            
             
@@ -61,12 +83,17 @@ var init = function (window) {
                 circle.x = 0;
             }
             
-            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
+           
             
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
-        }
+        }game.checkCirclePosition = function (circle) {
+            // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
+            if (circle.x > canvas.width) {
+              circle.x = 0;
+            }
+          
         
         /////////////////////////////////////////////////////////////
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
