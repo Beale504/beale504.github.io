@@ -11,7 +11,7 @@ var init = function (window) {
         
     
     window.opspark.makeGame = function() {
-        
+    }
         window.opspark.game = {};
         var game = window.opspark.game;
         
@@ -20,7 +20,7 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-        ````javascript
+        javascript
         
         var circle;			// variable to hold a single circle when creating circles / iterating
         var circles = [];	// variable to store all circles in one Array
@@ -32,14 +32,13 @@ view.addChild(circle);
 circles.push(circle);
 
         // TODO 3 / 7 : Call the drawCircle() function 
-        ```js
-        physikz.updatePosition(/* Your Bracket Notation HERE */);
-  physikz.updatePosition(/* Your Bracket Notation HERE */);
-  physikz.updatePosition(/* Your Bracket Notation HERE */);
-  physikz.updatePosition(/* Your Bracket Notation HERE */);
-  physikz.updatePosition(/* Your Bracket Notation HERE */);
+    
+        physikz.updatePosition(canvas, true, true, "#990", 3);
+        view.addChild(circle);
+circles.push(circle);
+  
 }
-        ```
+        
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -52,19 +51,21 @@ circles.push(circle);
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition(/* Your Bracket Notation HERE */);
-            physikz.updatePosition(/* Your Bracket Notation HERE */);
-            physikz.updatePosition(/* Your Bracket Notation HERE */);
-            physikz.updatePosition(/* Your Bracket Notation HERE */);
-            physikz.updatePosition(/* Your Bracket Notation HERE */);
+            
+            
+            physikz.updatePosition(canvas, true, true, "#990", 3);
+        view.addChild(circle);
+circles.push(circle);
+             {
+                height; 25;
+                width; 25;
+                background-color;
+                border-radius; 50%
+                display; inline-block;
+              }
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            game.checkCirclePosition(/* Your Bracket Notation HERE */);
-            game.checkCirclePosition(/* Your Bracket Notation HERE */);
-            game.checkCirclePosition(/* Your Bracket Notation HERE */);
-            game.checkCirclePosition(/* Your Bracket Notation HERE */);
-            game.checkCirclePosition(/* Your Bracket Notation HERE */);
-            var rightEdge = circle.x + circle.radius;
+            
             for (var i = 0; i < myArray.length; i++) {
             // TODO 9 : Iterate over the array
            
@@ -88,7 +89,7 @@ circles.push(circle);
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
-        }game.checkCirclePosition = function (circle) {
+        };checkCirclePosition = function (circle) {
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             if (circle.x > canvas.width) {
               circle.x = 0;
@@ -108,12 +109,12 @@ circles.push(circle);
         game.update = update;
         
         app.addUpdateable(window.opspark.game);
-    }
-};
+        }
+    };
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports = init;
-}
+    }
